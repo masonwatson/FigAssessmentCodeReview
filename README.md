@@ -1,4 +1,4 @@
-# **FIG Assessment Implementation**
+# **FIG Assessment Code Reviews**
 
 > This repository contains my code reviews for the [FIG Code Review Assessment](https://github.com/andrewbarnettfig/FIG.CodeReview.Assessment2025).
 > I have provided quick links below to easily navigate through the project!
