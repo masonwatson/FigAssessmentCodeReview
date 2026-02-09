@@ -8,4 +8,4 @@
 ## **Code Reviews**
 - [Example 1 Code Review](./FigAssessmentCodeReviews.CodeReviews/Example1CodeReview.cs)
 - [Example 2 Code Review](./FigAssessmentCodeReviews.CodeReviews/Example2CodeReview%20.cs)
-- [Example 3 Code Review](./)
+- [Example 3 Code Review](https://github.com/masonwatson/FigAssessmentExample3/tree/master/Example3CodeReview)
