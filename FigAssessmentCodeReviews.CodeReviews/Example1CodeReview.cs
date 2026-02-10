@@ -77,9 +77,6 @@ namespace FigAssessmentCodeReviews.CodeReviews
 
         public async Task<bool> ValidateUserAsync(string username, string password)
         {
-            // Do you mind adding some validation for username and password, just to verify that we have something
-            // to search on?
-
             // Looks like this needs the same update mentioned in lines 28-29!
             using var connection = new SqlConnection(_connectionString);
 
@@ -99,8 +96,6 @@ namespace FigAssessmentCodeReviews.CodeReviews
         // This line would need the update mentioned in line 21-22
         public async Task<User> CreateUserAsync(string username, string email, string password)
         {
-            // Do you mind adding some validation for username, email, and password since all of these fields are required?
-
             // Looks like this needs the same update mentioned in lines 28-29!
             using var connection = new SqlConnection(_connectionString);
 
@@ -113,11 +108,11 @@ namespace FigAssessmentCodeReviews.CodeReviews
             var insertQuery = $"INSERT INTO Users (Username, Email, Password, CreatedDate, IsActive) VALUES ('{username}', '{email}', '{password}', GETDATE(), 1)";
             using var command = new SqlCommand(insertQuery, connection);
 
-            // Because of the change mentioned in lines 111-112 and since we don't want to block while the query executes,
+            // Because of the change mentioned in lines 106-107 and since we don't want to block while the query executes,
             // would you mind changing this call to be 'using var reader = await command.ExecuteReaderAsync();'?
             command.ExecuteNonQuery();
 
-            // Because of the changes mentioned in lines 111-112 and 116-117, we should be able to remove lines 122-124
+            // Because of the changes mentioned in lines 106-107 and 111-112, we should be able to remove lines 117-119
             // Get the newly created user
             var selectQuery = $"SELECT TOP 1 * FROM Users WHERE Username = '{username}' ORDER BY CreatedDate DESC";
             using var selectCommand = new SqlCommand(selectQuery, connection);
